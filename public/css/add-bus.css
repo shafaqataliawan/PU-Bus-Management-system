@@ -1,0 +1,88 @@
+
+body {
+  background-color: #f4f6f9;
+}
+.heading{
+    color: #f49107;
+    font-weight: bold;
+}
+.form-control,
+.btn {
+  border-radius: 10px;
+}
+.card {
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.bus-btn{
+    background-color:#f49107 ;
+    color: white;
+    border: 1px solid #f49107;
+    font-weight: bold;
+    display: inline-block;
+   
+}
+.bus-btn:hover{
+    background-color: #FCA834;
+    color:white;
+   
+}
+
+ @media (max-width: 768px) {
+        .sidebar {
+          left: -250px;
+          transition: left 0.3s;
+          width: 220px;
+          z-index: 1050;
+        }
+        .sidebar.show {
+          left: 0;
+        }
+        .navbar-custom {
+          margin-left: 0 !important;
+        }
+        .container {
+          margin-left: 0 !important;
+          max-width: 100% !important;
+        }
+      }
+      @media (min-width: 769px) {
+        .sidebar {
+          left: 0;
+        }
+        .sidebar.show {
+          left: 0;
+        }
+        .navbar-custom {
+          margin-left: 240px !important;
+        }
+        .container {
+          margin-left: 240px !important;
+        }
+      }
+    
+
+.bus-form {
+  width: 100%;
+}
+
+/* Sirf 820px par */
+@media screen and (width: 820px) {
+  .bus-form{
+    width: 70%;
+  }
+}
+
+/* Sirf 1024px par */
+@media screen and (width: 1024px) {
+  .bus-form {
+    width: 76%;
+  }
+}
+
+/* Laptop aur us se badi screens (typically 1025px aur upar) */
+@media screen and (min-width: 1025px) {
+  .bus-form {
+    width: 80%;
+  }
+}

@@ -1,0 +1,84 @@
+* {
+  padding: 0px;
+  margin: 0px;
+
+}
+
+.section-bg {
+  background: url(https://www.pu.edu.pk/new/images/1.jpg);
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-box {
+  margin-top: 160px;
+}
+
+
+section .opsty-colore {
+  background-color: rgba(26, 145, 158, 0.3);
+  height: 100vh;
+}
+
+.home-container {
+  padding-top: 200px;
+}
+
+.home-text {
+  background-color: rgba(37, 82, 94, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ 
+}
+.home-para{
+  text-align: justify;
+  padding: 10px;
+}
+
+.btn-home {
+  background-color: rgba(37, 82, 94, 0.5);
+  border: 2px solid #fca834;
+}
+
+.btn-home:hover {
+  background-color: #f8b659;
+  border: #fca834;
+}
+
+/* About section  */
+.about-bg {
+  min-height: 300px;
+  background: url(../images/s1.jpg) center center / cover no-repeat;
+  border-radius: 20px;
+}
+
+/* map  */
+@media (max-width: 767.98px) {
+  .map-responsive iframe {
+    height: 250px !important;
+  }
+}
+
+/* Student Info Modal */
+.heading {
+  color: #f49107;
+  font-weight: bold;
+}
+
+.track-btn {
+  background-color: #FCA834;
+  color: white;
+  border: 1px solid #f49107;
+  font-weight: bold;
+  display: inline-block;
+
+}
+
+.track-btn:hover {
+  background-color: #f49107;
+  color: white;
+}
+

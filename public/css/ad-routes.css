@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.heading{
+    color: #f49107;
+    font-weight: bold;
+}
+.routes-btn{
+    background-color: #f49107 !important;
+    color: white;
+    border: 1px solid #f49107;
+    font-weight: bold;
+    display: inline-block;
+   
+}
+.routes-btn:hover{
+    background-color:#FCA834 !important;
+    color:white;
+   
+}
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .route-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .btn-add, .btn-submit {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .btn-remove {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #routeMap {
+            height: 400px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .waypoint-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            #routeMap {
+                height: 300px;
+            }
+        }
+    
+      @media (max-width: 768px) {
+        .sidebar {
+          left: -250px;
+          transition: left 0.3s;
+          width: 220px;
+          z-index: 1050;
+        }
+        .sidebar.show {
+          left: 0;
+        }
+        .navbar-custom {
+          margin-left: 0 !important;
+        }
+        .container {
+          margin-left: 0 !important;
+          max-width: 100% !important;
+        }
+      }
+      @media (min-width: 769px) {
+        .sidebar {
+          left: 0;
+        }
+        .sidebar.show {
+          left: 0;
+        }
+        .navbar-custom {
+          margin-left: 240px !important;
+        }
+        .container {
+          margin-left: 240px !important;
+        }
+      }
+    
+.routes-form{
+  width: 100%;
+}
+
+/* Sirf 820px par */
+@media screen and (width: 820px) {
+  .routes-form{
+    width: 70%;
+  }
+}
+
+/* Sirf 1024px par */
+@media screen and (width: 1024px) {
+  .routes-form {
+    width: 76%;
+  }
+}
+
+/* Laptop aur us se badi screens (typically 1025px aur upar) */
+@media screen and (min-width: 1025px) {
+  .routes-form{
+    width: 80%;
+  }
+}

@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.heading{
+    color: #f49107;
+    font-weight: bold;
+}
+.driver-btn{
+    background-color: #f49107;
+    color: white;
+    border: 1px solid #f49107;
+    font-weight: bold;
+    display: inline-block;
+   
+}
+.driver-btn:hover{
+    background-color:#FCA834 ;
+    color:white;
+   
+}
+ 
+.driver-form{
+  width: 100%;
+}
+
+/* Sirf 820px par */
+@media screen and (width: 820px) {
+  .driver-form{
+    width: 70%;
+  }
+}
+
+/* Sirf 1024px par */
+@media screen and (width: 1024px) {
+  .driver-form {
+    width: 76%;
+  }
+}
+
+/* Laptop aur us se badi screens (typically 1025px aur upar) */
+@media screen and (min-width: 1025px) {
+  .driver-form{
+    width: 80%;
+  }
+}

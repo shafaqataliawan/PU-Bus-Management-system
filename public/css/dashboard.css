@@ -1,0 +1,248 @@
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f1f3f5;
+      }
+      .navbar-bg{
+        background-color: #f49107 !important;
+        border-radius: 8px;
+      }
+      .pu-logo {
+        width: 50%;
+        display: flex-column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+  
+      }
+      .sidebar {
+        height: 100vh;
+        background-color: #25525e;
+        color: #fff;
+        position: fixed;
+        width: 240px;
+        padding-top: 20px;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+      }
+      .sidebar a {
+        color: white;
+        text-decoration: none;
+        padding: 12px 20px;
+        display: block;
+      }
+      .sidebar a:hover {
+        background-color: #e3f2fd;
+        color: #f49107;
+      }
+      .navbar-custom {
+        margin-left: 240px;
+        background-color: #ffffff;
+        padding: 10px 30px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .admin-heading{
+        color: #f49107;
+        font-weight: bold;
+      }
+      .content {
+        margin-left: 250px;
+        padding: 30px;
+      }
+      .card-summary {
+        border-radius: 15px;
+      }
+      .card-summary .card-body {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      .card-summary i {
+        font-size: 1.8rem;
+      }
+      .navbar .dropdown-menu {
+        background-color: #FCA834;
+        border: 1px solid #f49107;
+        right: 0;
+        left: auto;
+      }
+      
+      .dark-mode {
+        background-color: #121212 !important;
+        color: #ffffff !important;
+      }
+      .sidebar.dark-mode {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+      }
+      .sidebar.dark-mode a {
+        color: #ffffff !important;
+      }
+      .sidebar.dark-mode a:hover {
+        background-color: #333333 !important;
+      }
+      .navbar-custom.dark-mode {
+        background-color: #1a1a1a !important;
+        color: #ffffff !important;
+      }
+      .modal-content.dark-mode,
+      .dropdown-menu.dark-mode {
+        background-color: #1f1f1f !important;
+        color: #ffffff !important;
+      }
+      .dropdown-menu.dark-mode .dropdown-item {
+        color: #ffffff !important;
+      }
+      .dropdown-menu.dark-mode .dropdown-item:hover {
+        background-color: #333333 !important;
+      }
+      .dropdown-menu:not(.dark-mode) .dropdown-item {
+        color: #000000 !important;
+      }
+      .dropdown-menu:not(.dark-mode) .dropdown-item:hover {
+        background-color: #f0f0f0 !important;
+      }
+      .modal-header.dark-mode {
+        border-bottom: 1px solid #333333;
+      }
+      .modal-header:not(.dark-mode) {
+        border-bottom: 1px solid #dee2e6;
+      }
+      .sidebar .pu-logo img {
+        max-width: 100%;
+        height: auto;
+        width: 60px;
+      }
+    .annouc-heading{
+        color: #f49107;
+        font-weight: bold;
+    }
+    
+    .submit-btn{
+        background-color: #FCA834;
+        color: white;
+        border: 1px solid #f49107;
+        font-weight: bold;
+        display: inline-block;
+       
+    }
+    .submit-btn:hover{
+        background-color: #f49107;
+        color:white;
+       
+    }
+/* Responsive Sidebar */
+@media (max-width: 991.98px) {
+  .sidebar {
+    left: -260px;
+    transition: left 0.3s;
+    width: 240px;
+    z-index: 1050;
+    top: 0;
+    height: 100vh;
+  }
+  .sidebar.sidebar-open {
+    left: 0;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+  }
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 1040;
+  }
+  .sidebar-overlay.active {
+    display: block;
+  }
+  .navbar-custom {
+    margin-left: 0;
+    padding-left: 16px;
+  }
+  .content {
+    margin-left: 0;
+    padding: 16px;
+  }
+}
+@media (max-width: 575.98px) {
+  .card-summary .card-body {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  .card-summary i {
+    font-size: 2.2rem;
+  }
+  .content {
+    padding: 8px;
+  }
+  .admin-heading {
+    font-size: 1.2rem;
+  }
+}
+/* Sidebar polish */
+.sidebar {
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.08);
+}
+.sidebar a {
+  font-size: 1.08rem;
+  border-radius: 8px 0 0 8px;
+  margin-bottom: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar a.active, .sidebar a:hover {
+  background: #f49107;
+  color: #fff;
+}
+Card polish
+.card-summary {
+  box-shadow: 0 2px 12px rgba(36, 37, 38, 0.07);
+  border: none;
+  background: linear-gradient(135deg, #f49107 0%, #25525e 100%);
+  color: #fff;
+}
+.card-summary.bg-success {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: #fff;
+}
+.card-summary.bg-primary {
+  background: linear-gradient(135deg, #396afc 0%, #2948ff 100%);
+  color: #fff;
+}
+.card-summary.bg-dark {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #fff;
+}
+.card-summary.bg-warning {
+  background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+  color: #232526;
+}
+/* Table polish */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+.table thead {
+  background: #25525e;
+  color: #fff;
+}
+.table-bordered > :not(caption) > * > * {
+  border-color: #e3e3e3;
+}
+/* Responsive fix for action dropdown in tables */
+.action-dropdown .dropdown-menu {
+  min-width: 140px;
+  right: 0;
+  left: auto;
+  z-index: 1055;
+}
+@media (max-width: 576px) {
+  .action-dropdown .dropdown-menu {
+    min-width: 120px;
+    font-size: 0.95rem;
+  }
+}

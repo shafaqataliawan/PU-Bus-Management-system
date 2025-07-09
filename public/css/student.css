@@ -1,0 +1,25 @@
+body {
+    background-color: #f4f6f9;
+  }
+  .form-control,
+  .btn {
+    border-radius: 10px;
+  }
+  .card {
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  .student-heading{
+    color: #f49107;
+  }
+  .student-btn{
+    background-color: #FCA834;
+    color: white;
+    border: 1px solid #f49107;
+    font-weight: bold;
+
+}
+.student-btn:hover{
+    background-color: #f49107;
+    color: #fff;
+}

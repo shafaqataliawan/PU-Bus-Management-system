@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/notifications.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <title>Punjab University Bus Management System</title>
+
+</head>
+
+<body>
+  <!-- Navbar Start -->
+  <div id="navbar"></div>
+  <!-- Navbar End -->
+
+  <!-- Home Section Start -->
+  <section class="container-fluid p-0 img-fluid section-bg">
+    <div class="container-fluid">
+      <div class="container home-container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center home-box">
+            <div class="home-text">
+              <h1 class="display-4 fw-bold hero-title text-warning">
+                University of the Punjab
+              </h1>
+              <p class="lead hero-desc mx-auto text-white fw-bold home-para">
+                The University of the Punjab provides affordable transport for students and staff across Lahore. It runs
+                55 buses, including a shuttle between Allama Iqbal and Quaid-e-Azam campuses. Transport is also
+                available for trips like picnics and study tours. The university works to make travel easy and
+                comfortable for everyone.
+              </p>
+            </div>
+            <button class="btn btn-lg w-100 w-md-auto hero-btn mt-3 btn-home fw-bold text-white" data-bs-toggle="modal"
+              data-bs-target="#studentFormModal">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Quick Section  -->
+  <section class="m-3">
+    <div class="container" style="background-color: #b4aeae8f">
+      <div class="row justify-content-center">
+        <!-- Vice Chancellor's Message -->
+        <div class="col-12 col-md-6 d-flex flex-column flex-md-row align-items-center my-3">
+          <div class="me-md-3 mb-3 mb-md-0 w-100" style="max-width: 340px">
+            <img src="https://www.pu.edu.pk/new/images/vc1.jpg" alt="" class="img-fluid w-100" />
+          </div>
+          <div>
+            <h6 class="fw-bold">Vice Chancellor's Message</h6>
+            <p>
+              My mission is to raise the productivity of our graduates through
+              quality education and practical knowledge to contribute in a
+              significant way to the national economy.
+            </p>
+          </div>
+        </div>
+        <!-- Press Release -->
+        <div class="col-12 col-md-6 d-flex flex-column flex-md-row align-items-center mb-3">
+          <div class="w-100 mb-3 mb-md-0 me-md-3">
+            <h6 class="fw-bold text-uppercase text-center text-md-start mb-2">
+              Press Release
+            </h6>
+            <img src="https://www.pu.edu.pk/images/image/press/thumb_285X113_1S(27-04-25).jpg" alt=""
+              class="img-fluid w-70" style="max-width: 300px" />
+          </div>
+          <div>
+            <p>
+              <span class="fw-bold">
+                PU organizes int'l conference on Allama Iqbal and Muhammad
+                Akif Ersoy:
+              </span>
+              Punjab University Faculty of Oriental Learning in collaboration
+              with the Yunus Emre Institute Turkish Cultural Center
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About section  -->
+  <section class="m-3">
+    <h1 class="fw-bold text-warning ">AboutUs</h1>
+    <hr />
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <!-- Left: About Us with background image -->
+        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center p-0 about-bg">
+          <div class="bg-dark bg-opacity-50 rounded-3 p-4 m-3 w-100" style="max-width: 500px">
+            <p class="text-white">
+              The <span class="fw-bold">University of the Punjab</span> is one
+              of the largest public sector University and is dedicated to make
+              life for its students as comfortable as possible within the
+              available means.
+            </p>
+            <button type="button" class="btn btn-home">
+              <a href="about.html" class="text-white text-decoration-none fw-bold">Read More</a>
+              <span class="btn-label">
+                <i class="fa fa-arrow-circle-right text-white" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+        <!-- Right: Responsive Map -->
+        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center p-0">
+          <div class="map-responsive w-100 m-3" style="min-height: 300px">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27242.67684201591!2d74.35188238198244!3d31.520370446548446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904b8e0a1b3a9%3A0x2f9d1a3d6f3e6a9a!2sSheikh%20Zayed%20Islamic%20Centre%2C%20University%20of%20the%20Punjab!5e0!3m2!1sen!2s!4v1682812345678!5m2!1sen!2s"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Punjab University Transport Wing Location" style="
+                  border: 0;
+                  width: 100%;
+                  height: 300px;
+                  border-radius: 12px;
+                "></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Student Info Modal -->
+  <div class="modal fade" id="studentFormModal" tabindex="-1" aria-labelledby="studentFormModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <form id="studentForm" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title heading">Student Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Student Name</label>
+            <input type="text" class="form-control" id="studentName" name="name" required />
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Roll Number</label>
+            <input type="number" class="form-control" id="studentId" name="rollNumber" required />
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Class</label>
+            <input type="text" class="form-control" id="studentClass" name="class" required />
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Semester</label>
+            <select class="form-select" id="studentSemester" name="semester" required>
+              <option value="">Select Semester...</option>
+              <option value="1st">1st</option>
+              <option value="2nd">2nd</option>
+              <option value="3rd">3rd</option>
+              <option value="4th">4th</option>
+              <option value="5th">5th</option>
+              <option value="6th">6th</option>
+              <option value="7th">7th</option>
+              <option value="8th">8th</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Assigned Bus Number</label>
+            <input type="text" class="form-control" id="studentBus" name="assignedBus" required />
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="studentEmail" name="email" required />
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="studentPhone" name="phone" required />
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Gender</label>
+            <select class="form-select" id="studentGender" name="gender" required>
+              <option value="">Select Gender...</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Address</label>
+            <textarea class="form-control" id="studentAddress" name="address" rows="2" required></textarea>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label">Select Route</label>
+            <select class="form-select" id="studentRoute" name="route" required>
+              <option value="">Choose...</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn track-btn">Submit & Track</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Form Submission Script -->
+  <!-- Removed inline script, now in js/index.js -->
+
+  <!-- Home Section End -->
+
+  <!-- Footer Start -->
+  <footer class="footer-bg text-white pt-5 pb-4">
+    <div class="container text-center text-md-start">
+      <div class="row text-center text-md-start">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase font-weight-bold text-warning">
+            University of the Punjab
+          </h5>
+          <p class="f-para">
+            Established in Lahore in 1882, the University of Punjab is the
+            largest and the oldest seat of higher learning in Pakistan. It was
+            the first to be established in the sub-continent in a Muslim
+            majority area.
+          </p>
+        </div>
+        <div class="col-md-2 cl-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase font-weight-bold text-warning">
+            Services
+          </h5>
+          <p>
+            <a href="about.html" class="text-white ancher-hover">About Us</a>
+          </p>
+          <p>
+            <a href="routes.html" class="text-white ancher-hover">Bus Stops</a>
+          </p>
+          <p>
+            <a href="routes.html" class="text-white ancher-hover">Bus Routes</a>
+          </p>
+          <p>
+            <a href="tracking.html" class="text-white ancher-hover">Live Tracking</a>
+          </p>
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase font-weight-bold text-warning">
+            Quick Links
+          </h5>
+          <p>
+            <a href="https://www.pu.edu.pk/" class="text-white ancher-hover" target="_blank">Punjab University</a>
+          </p>
+          <p>
+            <a href="https://pu.edu.pk/page/facility/transport.html" class="text-white ancher-hover"
+              target="_blank">Transportation Department</a>
+          </p>
+          <p>
+            <a href="https://www.facebook.com/UniversityOfThePunjab.Official/" class="text-white ancher-hover"
+              target="_blank">Facebook</a>
+          </p>
+          <p>
+            <a href="https://www.instagram.com/universityofthepunjab/" class="text-white ancher-hover"
+              target="_blank">Instagram</a>
+          </p>
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase font-weight-bold text-warning">
+            Contact Us
+          </h5>
+          <p>
+            <i class="fas fa-home mr-3 text-warning"></i>
+            <a href="" class="text-white text-decoration-none">Quaid-e-Azam Campus, Lahore, Pakistan.</a>
+          </p>
+          <p>
+            <i class="fas fa-envelope mr-3 text-warning"></i> vc@pu.edu.pk
+          </p>
+          <p>
+            <i class="fas fa-phone mr-3 text-warning"></i> 0092-42-99211612
+          </p>
+          <p>
+            <i class="fas fa-print mr-3 text-warning"></i> 0092-42-99231101
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="row justify-content-center text-center">
+        <div class="col-12">
+          <p>
+            Copyright <span class="text-warning"> © </span> 2025 - All Rights Reserved -
+            <a href="https://www.pu.edu.pk/" target="_blank" class="ancher-hover text-white">PU.EDU.PK</a>
+          </p>
+          <p class="author">Developed by Shafaqat Ali & Umair Ahmad</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+ 
+
+  <!-- Fetch Announcements and Populate Modal -->
+  <!-- Removed inline script, now in js/announcements.js -->
+
+ 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/announcements.js"></script>
+</body>
+
+</html>

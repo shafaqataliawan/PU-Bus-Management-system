@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#map{
+  width: 100%;
+  height: 100%;
+}
+
+/* Map Styles */
+#map {
+    height: calc(100vh - 64px);
+    width: 100%;
+}
+
+#routeMap {
+    height: 400px;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Route Selector Styles */
+.heading{
+  color: #ff8c00;
+}
+.route-selector {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.route-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Route Marker Styles */
+.route-marker {
+    background: none;
+    border: none;
+}
+
+.marker-label {
+    background-color: #3498db;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Form Styles */
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.route-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Waypoint Styles */
+.waypoints-container {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.waypoint-item {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    position: relative;
+}
+
+.waypoint-item .form-group {
+    margin-bottom: 0.5rem;
+}
+
+.btn-add {
+    background-color: #27ae60;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #219a52;
+}
+
+.btn-remove {
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.btn-remove:hover {
+    background-color: #c0392b;
+}
+
+.btn-submit {
+    background-color: #3498db;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+
+
+/* Location Icon Styles */
+.location-icon {
+    background: none;
+    border: none;
+}
+
+.location-icon i {
+    color: #e74c3c;
+    font-size: 24px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+/* Direction Arrow Styles */
+.direction-arrow {
+    background: none;
+    border: none;
+}
+
+.direction-arrow div {
+    color: #ff8c00;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+/* Route Line Styles */
+.leaflet-routing-container {
+    display: none; /* Hide the routing instructions panel */
+}
+
+.leaflet-routing-line {
+    stroke: #3498db !important;
+    stroke-width: 4px !important;
+    stroke-opacity: 0.8 !important;
+}
+
+
+/* --- Responsive improvements for admin-tracking page --- */
+
+/* Sidebar Responsive */
+@media (max-width: 991.98px) {
+  .sidebar {
+    left: -260px;
+    transition: left 0.3s;
+    width: 220px;
+    z-index: 1050;
+    top: 0;
+    height: 100vh;
+    position: fixed;
+  }
+  .sidebar.sidebar-open {
+    left: 0;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+  }
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 1040;
+  }
+  .sidebar-overlay.active {
+    display: block;
+  }
+  .navbar-custom {
+    margin-left: 0;
+    padding-left: 16px;
+  }
+}
+
+
+
+/* Container and Content Responsive */
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 100vw;
+    padding: 1rem 0.5rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem 0.2rem !important;
+  }
+  .route-selector, .route-info-card {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.98rem;
+  }
+  .heading {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .container {
+    padding: 0.2rem !important;
+  }
+  .route-selector, .route-info-card {
+    padding: 0.5rem 0.2rem;
+    font-size: 0.92rem;
+  }
+  .heading {
+    font-size: 1rem;
+  }
+}
+
+/* Map Responsive */
+#map {
+  min-height: 300px;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100% !important;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  #map {
+    min-height: 220px;
+    height: 100vh;
+    max-height: 100vh;
+  }
+}
+@media (max-width: 575.98px) {
+  #map {
+    min-height: 160px;
+    height: 100vh;
+    max-height: 100vh;
+  }
+}
+
+/* Modal Responsive */
+@media (max-width: 575.98px) {
+  .modal-dialog {
+    max-width: 98vw !important;
+    margin: 0.5rem auto !important;
+  }
+  .modal-content {
+    padding: 0.5rem !important;
+  }
+}
+
+/* Route Info Card Responsive */
+@media (max-width: 768px) {
+  .route-info-card h3 {
+    font-size: 1.1rem;
+  }
+  .route-info-card div {
+    font-size: 0.98rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .route-info-card h3 {
+    font-size: 1rem;
+  }
+  .route-info-card div {
+    font-size: 0.92rem;
+  }
+}
+
+/* Hide sidebar on mobile by default, show with .sidebar-open */
+@media (max-width: 991.98px) {
+  .sidebar {
+    left: -260px;
+  }
+  .sidebar.sidebar-open {
+    left: 0;
+  }
+}
+
+/* Make sure dropdowns and modals are full width on mobile */
+@media (max-width: 575.98px) {
+  .dropdown-menu {
+    min-width: 90vw !important;
+    font-size: 0.98rem;
+  }
+}
+
+/* Announcement Modal Responsive */
+@media (max-width: 575.98px) {
+  #announcementModalContent {
+    padding: 0.5rem !important;
+  }
+}
+
+/* Utility: Prevent horizontal scroll */
+body, html {
+  overflow-x: hidden;
+}
+
+.tracking-form {
+  width: 100%;
+}
+
+/* Sirf 820px par */
+@media screen and (width: 820px) {
+  .tracking-form{
+    width: 70%;
+  }
+}
+
+/* Sirf 1024px par */
+@media screen and (width: 1024px) {
+  .tracking-form {
+    width: 76%;
+  }
+}
+
+/* Laptop aur us se badi screens (typically 1025px aur upar) */
+@media screen and (min-width: 1025px) {
+  .tracking-form {
+    width: 80%;
+  }
+}
+
+ @media (max-width: 768px) {
+        .sidebar {
+          left: -250px;
+          transition: left 0.3s;
+          width: 220px;
+          z-index: 1050;
+        }
+        .sidebar.show {
+          left: 0;
+        }
+        .navbar-custom {
+          margin-left: 0 !important;
+        }
+        .container {
+          margin-left: 0 !important;
+          max-width: 100% !important;
+        }
+      }
+      @media (min-width: 769px) {
+        .sidebar {
+          left: 0;
+        }
+        .sidebar.show {
+          left: 0;
+        }
+        .navbar-custom {
+          margin-left: 240px !important;
+        }
+        .container {
+          margin-left: 240px !important;
+        }
+      }
+    

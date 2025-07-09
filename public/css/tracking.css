@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#map{
+  width: 100%;
+  height: 100%;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: #25525e;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #34495e;
+}
+
+.nav-link.active {
+    background-color: #3498db;
+}
+.home-btn{
+  background-color: #f49107 !important;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+.home-btn:hover{
+  background-color: #FCA834 ;
+  
+}
+.heading{
+    color: #f49107;
+}
+
+/* Map Styles */
+#map {
+    height: calc(100vh - 64px);
+    width: 100%;
+}
+
+#routeMap {
+    height: 400px;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Route Selector Styles */
+.route-selector {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.route-select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Route Marker Styles */
+.route-marker {
+    background: none;
+    border: none;
+}
+
+.marker-label {
+    background-color: #3498db;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Form Styles */
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.route-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Waypoint Styles */
+.waypoints-container {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.waypoint-item {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    position: relative;
+}
+
+.waypoint-item .form-group {
+    margin-bottom: 0.5rem;
+}
+
+.btn-add {
+    background-color: #27ae60;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #219a52;
+}
+
+.btn-remove {
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.btn-remove:hover {
+    background-color: #c0392b;
+}
+
+.btn-submit {
+    background-color: #3498db;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .route-form {
+        padding: 1rem;
+    }
+    
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .nav-brand {
+        font-size: 1.2rem;
+    }
+}
+
+/* Location Icon Styles */
+.location-icon {
+    background: none;
+    border: none;
+}
+
+.location-icon i {
+    color: #e74c3c;
+    font-size: 24px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+
+/* Direction Arrow Styles */
+.direction-arrow {
+    background: none;
+    border: none;
+}
+
+.direction-arrow div {
+    color: #ff8c00;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+/* Route Line Styles */
+.leaflet-routing-container {
+    display: none; /* Hide the routing instructions panel */
+}
+
+.leaflet-routing-line {
+    stroke: #3498db !important;
+    stroke-width: 4px !important;
+    stroke-opacity: 0.8 !important;
+}
+/*.......................... footer2 ..................... */
+  .footer-2 {
+    border-top: 6px solid #25525e;
+    background-color: #fca834;
+    text-align: center;
+    padding: 10px 0 !important;
+    color: white;
+    width: 100%;
+  }
+  .footer-text {
+    color: #0e737f;
+    font-weight: bold;
+  }

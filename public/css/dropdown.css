@@ -1,0 +1,12 @@
+.dropdown-toggle::after {
+  display: none;
+}
+
+.action-dropdown .dropdown-item {
+  cursor: pointer;
+}
+
+.action-dropdown .dropdown-item i {
+  margin-right: 8px;
+  width: 16px;
+} 

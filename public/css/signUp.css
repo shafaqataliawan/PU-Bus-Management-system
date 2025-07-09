@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.signUp-btn{
+    background-color: #FCA834;
+    color: white;
+    border: 1px solid #f49107;
+    font-weight: bold;
+    display: inline-block;
+
+}
+.signUp-btn:hover{
+    background-color: #f49107;
+    color: #fff;
+
+}
+.login-btn{
+    color: #f49107;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease; 
+}
+.login-btn:hover{
+    transform: scale(1.1);
+    color: #f5b247;
+}

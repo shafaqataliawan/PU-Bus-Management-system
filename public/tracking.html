@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real-Time Tracking App</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+      integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="/css/tracking.css" />
+  </head>
+  <body>
+    <div id="secureModal" style="display:none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.5); z-index: 2000; display: flex; align-items: center; justify-content: center;">
+      <div style="background: #fff; padding: 2rem 2.5rem; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.2); position: relative; min-width: 320px; max-width: 90vw; text-align: center;">
+        <button id="closeSecureModal" style="position: absolute; top: 12px; right: 12px; background: none; border: none; font-size: 1.5rem; color: #888; cursor: pointer;">&times;</button>
+        <div style="color: #c00; font-size: 1.3rem; font-weight: bold; margin-bottom: 0.5rem;">This page is secure and only visible for authenticated users.</div>
+      </div>
+    </div>
+    <div id="trackingContent">
+      <!-- Navigation Header -->
+      <nav class="navbar">
+        <div class="nav-brand">Bus Tracking System</div>
+        <div class="nav-links">
+          <a href="/" class="nav-link active home-btn">Home</a>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="route-selector">
+          <h2 class="heading fw-bold">Select Bus Route</h2>
+          <select id="routeSelect" class="route-select">
+            <option value="">Select a route...</option>
+          </select>
+        </div>
+        <!-- Route Info Card -->
+        <div id="routeInfoCard" style="display:none; margin-bottom:1rem;" class="route-info-card">
+          <h3 style="margin-bottom:0.5rem; color:#25525e;">Route Information</h3>
+          <div><strong>Route Name:</strong> <span id="infoRouteName"></span></div>
+          <div><strong>Bus Number:</strong> <span id="infoBusNumber"></span></div>
+          <div><strong>Driver Name:</strong> <span id="infoDriverName"></span></div>
+          <div><strong>Stops:</strong> <span id="infoStops"></span></div>
+        </div>
+        <div id="map"></div>
+      </div>
+    </div>
+   <!-- footer2 -->
+    <footer class="footer-2 text-center py-2">
+      <div class="container " style="padding: 8px !important;">
+        <div class="row">
+          <div class="col-12 ">
+            <p class="mb-0 ">
+              Copyright © 2025
+              <span class="footer-text">University of the Punjab</span> All
+              rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Leaflet JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"
+      integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Routing Machine -->
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+
+    <!-- Socket.io client -->
+    <script
+      src="https://cdn.socket.io/4.8.1/socket.io.min.js"
+      integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom JS -->
+    <script src="/js/script.js"></script>
+    <script src="/js/tracking.js"></script>
+    <script>
+      // Auth check for tracking page
+      document.addEventListener('DOMContentLoaded', function() {
+        const token = localStorage.getItem('authToken');
+        const secureModal = document.getElementById('secureModal');
+        const closeSecureModal = document.getElementById('closeSecureModal');
+        const trackingContent = document.getElementById('trackingContent');
+        if (!token) {
+          if (secureModal) secureModal.style.display = 'flex';
+          if (trackingContent) trackingContent.style.display = 'none';
+        } else {
+          if (secureModal) secureModal.style.display = 'none';
+          if (trackingContent) trackingContent.style.display = 'block';
+        }
+        if (closeSecureModal) {
+          closeSecureModal.onclick = function() {
+            if (secureModal) secureModal.style.display = 'none';
+            window.location.href = 'index.html';
+          };
+        }
+      });
+    </script>
+  </body>
+</html>
